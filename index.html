@@ -1,98 +1,140 @@
+index.html
 <!DOCTYPE html>
-<html>
-  <link>
-    <meta charset="UTF-8">
-    <title>Crypto balance</title>
-    <link href="style.css" rel="stylesheet" >
-  </head>
-  <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Prix actuel du Bitcoin</th>
-          <th>Prix moyen des 50 derniers jours</th>
-		      <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="btc-price"></td>
-          <td id="btc-avg-price"></td>
-          <td id="btc-avg-price-200"></td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>Prix actuel du Etherum</th>
-          <th>Prix moyen des 50 derniers jours</th>
-          <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="eth-price"></td>
-          <td id="eth-avg-price-50"></td>
-          <td id="eth-avg-price-200"></td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>Prix actuel du BNB</th>
-          <th>Prix moyen des 50 derniers jours</th>
-          <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="bnb-price"></td>
-          <td id="bnb-avg-price-50"></td>
-          <td id="bnb-avg-price-200"></td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>Prix actuel du Dogecoin</th>
-          <th>Prix moyen des 50 derniers jours</th>
-          <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="doge-price"></td>
-          <td id="doge-avg-price-50"></td>
-          <td id="doge-avg-price-200"></td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>Prix actuel du S&P 500</th>
-          <th>Prix moyen des 50 derniers jours</th>
-          <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="sp-price"></td>
-          <td id="sp-avg-price-50"></td>
-          <td id="sp-avg-price-200"></td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>Prix actuel du Nasdak</th>
-          <th>Prix moyen des 50 derniers jours</th>
-          <th>Prix moyen des 200 derniers jours</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="nasdaq-price"></td>
-          <td id="nasdaq-avg-price-50"></td>
-          <td id="nasdaq-avg-price-200"></td>
-        </tr>
-      </tbody>
-    </table>
-    <script src="./script.js">
-    </script>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Balance Dashboard</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crypto & Market Dashboard</h1>
+    
+    <div class="crypto-grid">
+      <!-- Bitcoin Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin logo" class="crypto-icon">
+          <h2 class="crypto-name">Bitcoin (BTC)</h2>
+        </div>
+        <div class="crypto-price" id="btc-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="btc-avg-price">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="btc-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ethereum Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum logo" class="crypto-icon">
+          <h2 class="crypto-name">Ethereum (ETH)</h2>
+        </div>
+        <div class="crypto-price" id="eth-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="eth-avg-price-50">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="eth-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- BNB Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png" alt="BNB logo" class="crypto-icon">
+          <h2 class="crypto-name">BNB</h2>
+        </div>
+        <div class="crypto-price" id="bnb-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="bnb-avg-price-50">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="bnb-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dogecoin Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png" alt="Dogecoin logo" class="crypto-icon">
+          <h2 class="crypto-name">Dogecoin (DOGE)</h2>
+        </div>
+        <div class="crypto-price" id="doge-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="doge-avg-price-50">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="doge-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- S&P 500 Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <i class="fas fa-chart-line crypto-icon" style="color: #0066b2;"></i>
+          <h2 class="crypto-name">S&P 500</h2>
+        </div>
+        <div class="crypto-price" id="sp-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="sp-avg-price-50">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="sp-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- NASDAQ Card -->
+      <div class="crypto-card">
+        <div class="crypto-header">
+          <i class="fas fa-chart-pie crypto-icon" style="color: #0066b2;"></i>
+          <h2 class="crypto-name">NASDAQ</h2>
+        </div>
+        <div class="crypto-price" id="nasdaq-price">Loading...</div>
+        <div class="price-stats">
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 50 jours</div>
+            <div class="stat-value" id="nasdaq-avg-price-50">Loading...</div>
+          </div>
+          <div class="price-stat">
+            <div class="stat-label">Moyenne 200 jours</div>
+            <div class="stat-value" id="nasdaq-avg-price-200">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="last-updated">Dernière mise à jour: <span id="last-updated"></span></p>
+  </div>
+  
+  <button class="mode-toggle" id="mode-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <script src="./script.js"></script>
+</body>
 </html>
